@@ -9,6 +9,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+
 <style>
 
 *{
@@ -18,10 +19,18 @@
     font-family:'Kanit',sans-serif;
 }
 
+
 body{
-    background:linear-gradient(135deg,#0f172a,#0284c7,#38bdf8);
+
+    background:
+    linear-gradient(135deg,#0f172a,#0284c7,#38bdf8);
+
     color:white;
+
+    min-height:100vh;
+
 }
+
 
 
 /* Navbar */
@@ -29,20 +38,25 @@ body{
 header{
 
     position:fixed;
+
     top:0;
     left:0;
-    width:100%;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    width:100%;
 
     padding:18px 8%;
 
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(12px);
+    display:flex;
 
-    z-index:100;
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    z-index:10;
 
 }
 
@@ -50,16 +64,21 @@ header{
 .logo{
 
     font-size:28px;
+
     font-weight:bold;
 
 }
 
 
+
 nav a{
 
     color:white;
+
     text-decoration:none;
+
     margin-left:20px;
+
     transition:.3s;
 
 }
@@ -67,39 +86,43 @@ nav a{
 
 nav a:hover{
 
-    color:#001d3d;
+    color:#bae6fd;
 
 }
 
 
 
-/* Content */
+/* Main */
 
 
 .container{
 
     width:90%;
+
     max-width:1100px;
 
-    margin:120px auto 60px;
+    margin:120px auto 50px;
 
 }
+
 
 
 .title{
 
     text-align:center;
+
     font-size:42px;
+
     margin-bottom:45px;
 
 }
 
 
 
-/* Card */
+/* Portfolio Card */
 
 
-.grid{
+.projects{
 
     display:grid;
 
@@ -115,20 +138,28 @@ nav a:hover{
 .card{
 
     background:
+
     rgba(255,255,255,.15);
+
 
     backdrop-filter:blur(15px);
 
-    border-radius:22px;
+
+    border-radius:25px;
+
 
     overflow:hidden;
 
+
     box-shadow:
+
     0 15px 35px rgba(0,0,0,.25);
+
 
     transition:.4s;
 
-    position:relative;
+
+    animation:fade .8s ease;
 
 }
 
@@ -137,11 +168,13 @@ nav a:hover{
 .card:hover{
 
     transform:
-    translateY(-12px)
-    scale(1.03);
+
+    translateY(-15px);
+
 
     box-shadow:
-    0 20px 50px rgba(255,255,255,.3);
+
+    0 0 35px rgba(255,255,255,.4);
 
 }
 
@@ -150,15 +183,26 @@ nav a:hover{
 .card img{
 
     width:100%;
+
     height:220px;
 
     object-fit:cover;
+
+    transition:.4s;
 
 }
 
 
 
-.card-content{
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+.detail{
 
     padding:25px;
 
@@ -166,7 +210,7 @@ nav a:hover{
 
 
 
-.card h2{
+.detail h2{
 
     margin-bottom:10px;
 
@@ -174,7 +218,7 @@ nav a:hover{
 
 
 
-.card p{
+.detail p{
 
     color:#e0f2fe;
 
@@ -191,28 +235,34 @@ nav a:hover{
 
     display:inline-block;
 
-    margin-top:15px;
+    margin-top:18px;
 
-    padding:8px 22px;
+    padding:10px 25px;
+
 
     background:white;
 
     color:#0284c7;
 
+
     border-radius:30px;
+
 
     text-decoration:none;
 
+
     font-weight:bold;
+
 
     transition:.3s;
 
 }
 
 
+
 .btn:hover{
 
-    background:#0284c7;
+    background:#0369a1;
 
     color:white;
 
@@ -223,18 +273,12 @@ nav a:hover{
 /* Animation */
 
 
-.card{
-
-    animation:show .8s ease;
-
-}
-
-
-@keyframes show{
+@keyframes fade{
 
     from{
 
         opacity:0;
+
         transform:translateY(40px);
 
     }
@@ -242,6 +286,7 @@ nav a:hover{
     to{
 
         opacity:1;
+
         transform:translateY(0);
 
     }
@@ -270,9 +315,10 @@ nav{
 
 }
 
+
 .title{
 
-    font-size:34px;
+    font-size:35px;
 
 }
 
@@ -285,7 +331,9 @@ nav{
 </head>
 
 
+
 <body>
+
 
 
 <header>
@@ -314,17 +362,17 @@ My Portfolio
 
 
 
+
 <div class="container">
 
 
 <h1 class="title">
 ผลงานของฉัน
-    ไม่มี
 </h1>
 
 
 
-<div class="grid">
+<div class="projects">
 
 
 
@@ -332,22 +380,26 @@ My Portfolio
 
 <img src="images/project1.jpg">
 
-<div class="card-content">
+
+<div class="detail">
 
 <h2>เว็บไซต์ Portfolio</h2>
 
 <p>
-ออกแบบและพัฒนาเว็บไซต์แนะนำตัว
-ด้วย HTML และ CSS
+ออกแบบเว็บไซต์แนะนำตัว
+โดยใช้ HTML และ CSS
+พร้อมตกแต่ง UI ให้สวยงาม
 </p>
 
+
 <a href="#" class="btn">
-ดูเพิ่มเติม
+รายละเอียด
 </a>
 
 </div>
 
 </div>
+
 
 
 
@@ -356,17 +408,19 @@ My Portfolio
 
 <img src="images/project2.jpg">
 
-<div class="card-content">
 
-<h2>เว็บไซต์ร้านค้าออนไลน์</h2>
+<div class="detail">
+
+<h2>เว็บไซต์ร้านค้า</h2>
 
 <p>
-สร้างหน้าเว็บสินค้า
-พร้อมออกแบบ UI ให้ใช้งานง่าย
+ออกแบบหน้าเว็บขายสินค้า
+เน้นใช้งานง่ายและรองรับมือถือ
 </p>
 
+
 <a href="#" class="btn">
-ดูเพิ่มเติม
+รายละเอียด
 </a>
 
 </div>
@@ -376,21 +430,25 @@ My Portfolio
 
 
 
+
+
 <div class="card">
 
 <img src="images/project3.jpg">
 
-<div class="card-content">
 
-<h2>โปรเจกต์ระบบข้อมูล</h2>
+<div class="detail">
+
+<h2>ระบบจัดการข้อมูล</h2>
 
 <p>
-พัฒนาระบบจัดการข้อมูล
-และออกแบบ Dashboard
+สร้าง Dashboard
+สำหรับแสดงข้อมูลและจัดการระบบ
 </p>
 
+
 <a href="#" class="btn">
-ดูเพิ่มเติม
+รายละเอียด
 </a>
 
 </div>
@@ -411,6 +469,7 @@ My Portfolio
 © 2026 My Portfolio
 
 </footer>
+
 
 
 </body>
