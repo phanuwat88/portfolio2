@@ -1,17 +1,554 @@
-<h1>ช่องทางติดต่อ</h1>
+<!DOCTYPE html>
+<html lang="th">
 
-<div class="contact">
+<head>
 
-<p>📧 Email : your@email.com</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>📱 โทร : 08x-xxx-xxxx</p>
+<title>ติดต่อ | Contact</title>
 
-<p>💬 LINE : yourid</p>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<p>📘 Facebook : Your Name</p>
 
-<p>📸 Instagram : yourname</p>
+<style>
 
-<p>💻 GitHub : github.com/yourname</p>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
+
+
+body{
+
+    background:
+    linear-gradient(135deg,#0f172a,#0284c7,#38bdf8);
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+
+/* Navbar */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    z-index:10;
+
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:20px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#bae6fd;
+
+}
+
+
+
+/* Container */
+
+.container{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:120px auto 50px;
+
+}
+
+
+
+.title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+/* Contact Box */
+
+
+.contact-box{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+
+.card{
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:25px;
+
+
+    padding:35px 20px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.25);
+
+
+    transition:.4s;
+
+
+    animation:show .8s ease;
+
+}
+
+
+
+.card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+
+    box-shadow:
+
+    0 0 35px rgba(255,255,255,.4);
+
+}
+
+
+
+
+.icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h2{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card p{
+
+    color:#e0f2fe;
+
+}
+
+
+
+.card a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+.card a:hover{
+
+    color:#bae6fd;
+
+}
+
+
+
+
+/* Message */
+
+
+.message{
+
+    margin-top:40px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    padding:30px;
+
+    border-radius:25px;
+
+}
+
+
+input,textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:white;
+
+}
+
+
+textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+button{
+
+    padding:12px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:white;
+
+    color:#0284c7;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    background:#0369a1;
+
+    color:white;
+
+}
+
+
+
+
+
+@keyframes show{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+footer{
+
+    text-align:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.15);
+
+}
+
+
+
+
+@media(max-width:768px){
+
+nav{
+
+    display:none;
+
+}
+
+
+.title{
+
+    font-size:35px;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+<div class="logo">
+My Portfolio
+</div>
+
+
+<nav>
+
+<a href="index.html">หน้าหลัก</a>
+
+<a href="about.html">ประวัติส่วนตัว</a>
+
+<a href="education.html">การศึกษา</a>
+
+<a href="portfolio.html">ผลงาน</a>
+
+<a href="contact.html">ติดต่อ</a>
+
+</nav>
+
+</header>
+
+
+
+
+<div class="container">
+
+
+<h1 class="title">
+ช่องทางติดต่อ
+</h1>
+
+
+
+<div class="contact-box">
+
+
+
+<div class="card">
+
+<div class="icon">📧</div>
+
+<h2>Email</h2>
+
+<p>
+<a href="#">
+your@email.com
+</a>
+</p>
 
 </div>
+
+
+
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h2>Phone</h2>
+
+<p>
+08x-xxx-xxxx
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">💬</div>
+
+<h2>LINE</h2>
+
+<p>
+your_line_id
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="icon">💻</div>
+
+<h2>GitHub</h2>
+
+<p>
+github.com/yourname
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">📘</div>
+
+<h2>Facebook</h2>
+
+<p>
+Your Facebook
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">📷</div>
+
+<h2>Instagram</h2>
+
+<p>
+@yourname
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="message">
+
+
+<h2>
+ส่งข้อความถึงฉัน
+</h2>
+
+
+<input type="text" placeholder="ชื่อของคุณ">
+
+
+<input type="email" placeholder="Email">
+
+
+<textarea placeholder="ข้อความ"></textarea>
+
+
+<button>
+ส่งข้อความ
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<footer>
+
+© 2026 My Portfolio
+
+</footer>
+
+
+
+</body>
+
+</html>
