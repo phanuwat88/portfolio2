@@ -1,114 +1,137 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+<title>Welcome</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f4f4;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
 }
 
-header{
-    background:#0077cc;
+body{
+    background:#0f172a;
     color:white;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
+    background:
+    linear-gradient(rgba(15,23,42,.65),rgba(15,23,42,.8)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.content{
+    max-width:700px;
     padding:20px;
 }
 
-nav{
-    background:#333;
-    text-align:center;
+h1{
+    font-size:60px;
+    margin-bottom:15px;
 }
 
-nav a{
+p{
+    font-size:20px;
+    color:#d1d5db;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#06b6d4,#3b82f6);
+    transition:.3s;
+    font-size:18px;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.menu a{
     color:white;
     text-decoration:none;
-    padding:15px;
-    display:inline-block;
+    margin-left:25px;
 }
 
-nav a:hover{
-    background:#0077cc;
+.menu a:hover{
+    color:#38bdf8;
 }
 
-section{
-    max-width:900px;
-    margin:20px auto;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-}
+@media(max-width:768px){
+    h1{
+        font-size:38px;
+    }
 
-footer{
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:15px;
+    p{
+        font-size:17px;
+    }
+
+    .nav{
+        padding:15px 20px;
+    }
+
+    .menu{
+        display:none;
+    }
 }
 </style>
 
 </head>
 <body>
 
-<header>
-    <h1>Portfolio ของฉัน</h1>
-    <p>ยินดีต้อนรับสู่เว็บไซต์ส่วนตัว</p>
-</header>
+<div class="nav">
+    <div class="logo">My Website</div>
 
-<nav>
-    <a href="#home">หน้าหลัก</a>
-    <a href="#about">ประวัติส่วนตัว</a>
-    <a href="#education">ประวัติการศึกษา</a>
-    <a href="#portfolio">ผลงาน</a>
-    <a href="#contact">ติดต่อ</a>
-</nav>
+    <div class="menu">
+        <a href="#">หน้าแรก</a>
+        <a href="#">เกี่ยวกับ</a>
+        <a href="#">ผลงาน</a>
+        <a href="#">ติดต่อ</a>
+    </div>
+</div>
 
-<section id="home">
-    <h2>หน้าหลัก</h2>
-    <p>สวัสดี ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</p>
+<section class="hero">
+    <div class="content">
+        <h1>ยินดีต้อนรับ</h1>
+        <p>สร้างเว็บไซต์สวย ๆ ด้วย HTML และ CSS ดีไซน์ทันสมัย รองรับทั้งคอมพิวเตอร์และมือถือ</p>
+
+        <a href="#" class="btn">เริ่มต้นใช้งาน</a>
+    </div>
 </section>
-
-<section id="about">
-    <h2>ประวัติส่วนตัว</h2>
-    <p><strong>ชื่อ:</strong>นาย ภานุวัฒน์ เวียงคำ</p>
-    <p><strong>วันเกิด:</strong> 22/10/2551</p>
-    <p><strong>งานอดิเรก:</strong> อ่านหนังสือ เล่นกีฬา </p>
-</section>
-
-<section id="education">
-    <h2>ประวัติการศึกษา</h2>
-    <ul>
-        <li>ประถมศึกษา : โรงเรียนบ้านค้อน้อย</li>
-        <li>มัธยมศึกษา : โรงเรียนพานทอง</li>
-        <li>มหาวิทยาลัย : ...</li>
-    </ul>
-</section>
-
-<section id="portfolio">
-    <h2>ผลงาน</h2>
-    <ul>
-        <li>เว็บไซต์ Portfolio</li>
-        <li>ระบบจัดการข้อมูลนักศึกษา</li>
-        <li>แอปพลิเคชัน Mobile</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>ช่องทางการติดต่อ</h2>
-    <p>Email : yourname@email.com</p>
-    <p>โทร : 095-592-4800</p>
-    <p>GitHub : https://github.com/yourusername</p>
-    <p>Facebook : https://facebook.com/yourname</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Portfolio</p>
-</footer>
 
 </body>
 </html>
