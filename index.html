@@ -299,3 +299,27 @@ nav{
     border:6px solid #38bdf8;
     box-shadow:0 0 40px rgba(56,189,248,.5);
 }
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+    padding:120px 10%;
+}
+
+.hero-image img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 35px rgba(56,189,248,.45);
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
