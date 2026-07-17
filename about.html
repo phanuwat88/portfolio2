@@ -1,12 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติส่วนตัว</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#0ea5e9,#38bdf8);
+    color:#fff;
+}
+
+/* เมนู */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#001d3d;
+}
+
+/* เนื้อหา */
+.container{
+    max-width:1100px;
+    margin:120px auto 50px;
+    padding:20px;
+}
+
+.card{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    flex-wrap:wrap;
+}
+
+.card img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    box-shadow:0 0 30px rgba(255,255,255,.5);
+}
+
+.info{
+    flex:1;
+}
+
+.info h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.info p{
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+table{
+    width:100%;
+    border-spacing:10px;
+}
+
+td{
+    padding:10px;
+}
+
+td:first-child{
+    width:170px;
+    font-weight:bold;
+    color:#dbeafe;
+}
+
+/* ทักษะ */
+.skill{
+    margin-top:30px;
+}
+
+.bar{
+    background:#ffffff55;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+.bar div{
+    height:18px;
+    background:white;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,.15);
+}
+
+@media(max-width:768px){
+
+.card{
+    text-align:center;
+    justify-content:center;
+}
+
+table{
+    text-align:left;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">My Portfolio</div>
+
+<nav>
+<a href="index.html">หน้าหลัก</a>
+<a href="about.html">ประวัติส่วนตัว</a>
+<a href="education.html">การศึกษา</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="contact.html">ติดต่อ</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<img src="profile.jpg" alt="Profile">
+
+<div class="info">
+
 <h1>ประวัติส่วนตัว</h1>
 
-<img src="profile.jpg" class="profile">
+<p>
+สวัสดีครับ ยินดีต้อนรับสู่หน้าประวัติส่วนตัวของผม
+ผมเป็นนักเรียนที่สนใจด้านกึฬา วอลเลย์วอล
+</p>
 
 <table>
-<tr><td>ชื่อ</td><td>ชื่อของคุณ</td></tr>
-<tr><td>วันเกิด</td><td>...</td></tr>
-<tr><td>อายุ</td><td>...</td></tr>
-<tr><td>ที่อยู่</td><td>...</td></tr>
-<tr><td>งานอดิเรก</td><td>...</td></tr>
-<tr><td>ทักษะ</td><td>HTML CSS JavaScript</td></tr>
+
+<tr>
+<td>ภานุวัฒน์ เวียงคำ</td>
+<td>ภานุวัฒน์</td>
+</tr>
+
+<tr>
+<td>ชื่อ เอิร์ท</td>
+<td>...</td>
+</tr>
+
+<tr>
+<td></td>เอิร์ท</td>
+<td>...</td>
+</tr>
+
+<tr>
+<td>17ปี</td>
+<td>...</td>
+</tr>
+
+<tr>
+<td>27/27หมู่5 ตำบลหนองตำลึง อำเภอพานทอง จังหวัดชลบุรี</td>
+<td>...</td>
+</tr>
+
+<tr>
+<td>งานอดิเรก</td>
+<td>เล่นกีฬา ฟังเพลง ตกปลา</td>
+</tr>
+
+<tr>
+<td>อีเมล</td>
+<td>phanuwatggei@email.com</td>
+</tr>
+
 </table>
+
+<div class="skill">
+
+<h2>ทักษะ (Skills)</h2>
+
+<p>HTML</p>
+<div class="bar"><div style="width:90%"></div></div>
+
+<p>CSS</p>
+<div class="bar"><div style="width:85%"></div></div>
+
+<p>JavaScript</p>
+<div class="bar"><div style="width:70%"></div></div>
+
+<p>PHP</p>
+<div class="bar"><div style="width:60%"></div></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 My Portfolio
+</footer>
+
+</body>
+</html>
